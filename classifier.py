@@ -3,6 +3,7 @@ import streamlit as st
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
 from sklearn.metrics import classification_report
+from sklearn.feature_extraction.text import CountVectorizer
 import pickle
 bbc_text = pd.read_csv('bbc-text.txt')
 bbc_text=bbc_text.rename(columns = {'text': 'News_Headline'}, inplace = False)
